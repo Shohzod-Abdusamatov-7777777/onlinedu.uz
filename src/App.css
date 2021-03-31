@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* bootstrap classini BTN-PRIMARY rangini ozgartirdim  */
+.btn-primary {
+  color: #ffffff;
+  background-color: #26caac;
+  border-color: #26caac;
+  border-radius: 8px;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #20aa91 !important;
+  border-color: #1e9f87 !important;
+}
+.btn-outline-primary {
+  background-color: #ffffff !important;
+  color: #26caac;
+  border-color: #26caac;
+  font-weight: 700 !important;
+  border-radius: 8px;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:visited {
+  background-color: #26caac !important;
+  border-color: #26caac !important;
+  color: #fff !important;
+}
+
+/* yashil  */
+.text-green {
+  color: #26caac;
+}
+
+/* paragraplarning styli */
+.text-p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #898da6;
+  font-weight: 400;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*  sarlavha rangi */
+.text-suyoh {
+  color: rgb(13, 46, 105)  !important;
+}
+
+/* text title */
+.text-title {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  /* font-size: clamp(1rem, 2vw, 1.1rem); */
+  text-transform: capitalize;
+}
+
+/* border radius */
+.b-r-2 {
+  border-radius: 1.5rem;
+}
+.bt-r-2 {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+@media screen and (max-width: 576px) {
+  .b-r-2 {
+    border-radius: 1rem;
+  }
+  .bt-r-2 {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
+
+.text-yellow {
+  color: #fafe45 !important;
+}
+
+.bg-gold {
+  background: #f2994a;
+  color: #f7f7f7;
+  letter-spacing: 1px;
+  /* filter: hue-rotate(10deg); */
+}
+.bg-gold:hover {
+  background: #e2832f;
+  color: #f7f7f7;
+}
+/* top-85px */
+.top-80 {
+  padding-top: 85px;
+}
+
+.b-shadow {
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1), 0 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+li {
+  list-style-type: none;
+  line-height: 2;
+}
+
+button a,
+button a:hover {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+a,a:hover{
+  text-decoration: none;
+}
+/* scroll x */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.footer a,.footer a:hover{
+  font-weight: 500;
+  color: #898da6;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}

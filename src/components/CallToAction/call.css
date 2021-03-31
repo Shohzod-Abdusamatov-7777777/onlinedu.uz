@@ -1,0 +1,62 @@
+.call-img {
+  background-image: url("../../images/call-to-action.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 100%;
+}
+@media (max-width: 991.98px) {
+  .call-img {
+    background-image: none !important;
+  }
+}
+
+.call-title {
+  font-size: 2.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #0d2e69;
+}
+
+/* qatnashuvchilar */
+.cta-participants {
+  display: flex;
+}
+.cta-participants > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cta-participants > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  border: 2px solid #fff;
+  background-color: #0d2e69;
+  /* border radius all browser */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: unset;
+}
+.cta-participants ul li:not(:first-child) {
+  margin-left: -15px;
+}
+.cta-participants > ul > li > img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+.cta-participants > ul > li > span {
+  font-size: 14px;
+  color: #fff;
+}
+
