@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <div className="text-center w-100 pt-3 pb-2 border-top">
         <h6 className="text-suyoh font-weight-bold">
-          &copy; 2020-2021 Copyright. Barcha huquqlar himoyalangan.
+          &copy; 2020-2021 Copyright. Barcha huquqlar himoyalangan.Shohzod
         </h6>
       </div>
     </div>
