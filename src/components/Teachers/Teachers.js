@@ -23,7 +23,6 @@ const Teachers = ({ teachers }) => {
             yordam beradi.
           </p>
         </div>
-
         {/* ############################################################################ */}
         {/* teachers */}
         <div className="my-3 d-flex overflow-x-hidden swiper-container">
@@ -40,6 +39,7 @@ const Teachers = ({ teachers }) => {
         <button className="btn btn-primary btn-md mt-4 p-2 px-3">
           <Link to="/teachers">Barchasini ko'rish</Link>
         </button>
+        <button className="bvtn btn btn-danger">check</button>
       </div>
     </div>
   );
