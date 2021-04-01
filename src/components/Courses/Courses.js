@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import Course from "./Course";
 
+
+// translate i18n
+import { useTranslation } from "react-i18next";
+
+
 const Courses = () => {
+
+   // trasnlate
+   const { t, i18n } = useTranslation("common");
+
+
   const [courses, setCourses] = useState([
     {
       id: 1,
@@ -48,7 +58,7 @@ const Courses = () => {
   ]);
   return (
     <div className="container text-center py-4">
-      <h2 className="text-suyoh font-weight-bold mb-4">Mashxur kurslar</h2>
+      <h2 className="text-suyoh font-weight-bold mb-4">{t("courses.title")}</h2>
       <div className="row">
         {courses.map((course) => (
           <Course key={course.id} course={course} />
@@ -56,7 +66,7 @@ const Courses = () => {
       </div>
       <div>
         <button className="btn btn-primary my-3 py-2 px-3  font-weight-bold">
-          Barcha kursni ko'rish
+        {t("courses.barcha")}
         </button>
       </div>
     </div>

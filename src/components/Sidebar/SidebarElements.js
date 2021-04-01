@@ -8,7 +8,7 @@ display:none;
     height: 100%;
     min-height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: fixed;top:0;
     transition: opacity 0.3s ease-in-out;
     opacity: ${(props) => (props.sideOpen ? "1" : "0")};
     z-index: ${(props) => (props.sideOpen ? "9" : "-1")};

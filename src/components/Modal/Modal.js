@@ -16,7 +16,7 @@ const Modal = (props) => {
         <ModalBox show={showModal}>
           {/* moadl header */}
           <div className="modal-header">
-            <h5>Kirish</h5>
+            <h5>Ro'yxatdan o'tish</h5>
             <button
               className="btn"
               type="button"
@@ -48,7 +48,10 @@ const Modal = (props) => {
               <input className="form-control" type="password" />
             </div>
             {/* royhatdanm otish button */}
-            <button type="button" className="btn py-2 mb-2 btn-primary w-100">
+            <button
+              type="button"
+              className="btn py-2 mb-2 btn-primary w-100 font-size-18 font-weight-bold"
+            >
               Ro'yxatdan o'tish
             </button>
             {/* parolni tiklash va kirish */}

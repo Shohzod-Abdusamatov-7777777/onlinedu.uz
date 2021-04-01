@@ -1,0 +1,84 @@
+{
+    "navbar": {
+        "kirish": "Kirish",
+        "kategoriya": "Kategoriyalar",
+        "fan1": "Aniq Fanlar",
+        "fan2": "Tabiiy Fanlar",
+        "fan3": "Xorijiy Fanlar",
+        "search": "Nimani o'rganishni xohlaysiz? Misol uchun: Menedjment"
+    },
+    "hero-section": {
+        "title": "Bilimlaringizni boyiting va malakangizni oshiring",
+        "desc": "Malaka oshirish uchun kurslar endi onlayn. Qulayliklardan foydalaning va vaqtingizni tejang.",
+        "boshla": "Boshlamoq"
+    },
+    "xamkor": {
+        "title1": "5000+ xalq ta'limi xodimlari",
+        "title2": "butun O'zbekiston bo'yicha onlayn tarzda malaka oshirishmoqda."
+    },
+    "qulaylik": {
+        "title": "Siz uchun yaratilgan qulayliklar",
+        "desc": "Platformamiz yuqori texnologiyalar zamonida taqdim qilinayotgan imkoniyatlardan unumli foydalanishga va vaqtingizni tejashga, o'zingizga qulay vaqtda malaka oshirishingizga yordam beradi.",
+        "cards": {
+            "card1": {
+                "title": "Qulay Interfeys",
+                "desc": "Oson, tushunarli va qulay interfeys orqali platforma imkoniyatlaridan to'liq foydalanishingiz mumkin."
+            },
+            "card2": {
+                "title": "Malakali Mutaxassislar",
+                "desc": "Malakali mutaxassislar tomonidan tayyorlangan kurslar orqali o'z malakangizni oshiring. Yanada ko'proq bilimga ega bo'ling."
+            },
+            "card3": {
+                "title": "50+ Kurslar Barcha Yo'nalishlar Bo'yicha",
+                "desc": "Video materiallar qiziqarli va tushunarli ko'rinishda o'tilgan bo'lib, barcha ma'lumotlarni hech qanday qiyinchiliklarsiz o'zlashtira olasiz."
+            },
+            "card4": {
+                "title": "50+ Kurslar Barcha Yo'nalishlar Bo'yicha",
+                "desc": "O'zingiz qiziqqan istalgan kursni toping. Qo'shimcha kurslarga yozilib, bilimlaringizni yanada boyitib, malakangizni oshiring."
+            }
+        }
+    },
+    "sertifikat": {
+        "title": "Sertifikatni haqiqiylikka tekshiring",
+        "desc": "Ushbu platforma orqali ish beruvchilar ham, sertifikat egalari ham sertifikatning haqiqiyligini tekshirishlari mumkin.",
+        "search": "Sertifikat nomerini kiriting ",
+        "tekshir": "Sertifikatni tekshirish"
+    },
+    "courses": {
+        "title": "Ommabop kurslar",
+        "barcha": "Barcha kursni ko'rish"
+    },
+    "call-to-action": {
+        "title": "Mutaxassislar tomonidan o'tkaziladigan vebinarga qo'shiling.",
+        "desc": "Vebinarlarni qatnashib, yangi bilimlar orttiring, tajribangiz bilan ulashing, savol bering va javoblar oling!",
+        "foydalanuvchi": "foydalanuvchi barcha yo'nalishlar bo'yicha vebinarlarga qo'shilishdi.",
+        "btn": "Qo'shilish"
+    },
+    "teachers": {
+        "title": "Bizning mutaxassislar",
+        "desc": "Yetakchi mutaxassislarimiz tomonidan tayyorlangan kurslar sizga kerakli barcha bilimlarni berib, malakangizni oshirishga yordam beradi.",
+        "btn": "Barchasini ko'rish"
+    },
+    "footer": {
+        "courses": {
+            "kurslar": "KURSLAR",
+            "fan1": "Aniq Fanlar",
+            "fan2": "Tabiiy Fanlar",
+            "fan3": "Xorijiy Fanlar"
+        },
+        "my-profile": {
+            "profile": "MENING PROFILIM",
+            "account": "Akkaunt",
+            "my-courses": "Mening kurslarim",
+            "practice": "Malaka oshirish"
+        },
+        "contact": {
+            "contact": "ALOQA",
+            "about-our": "Biz haqimizda",
+            "policy": "Konfidentsiallik siyosat",
+            "help": "Yordam",
+            "faq": "FAQ"
+        },
+        "copyright": "2020-2021 Copyright. Barcha huquqlar himoyalangan."
+    }
+}

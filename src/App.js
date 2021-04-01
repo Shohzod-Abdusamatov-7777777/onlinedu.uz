@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Modal from "./components/Modal/Modal";
@@ -20,14 +20,12 @@ const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [sideOpen, setSideOpen] = useState(false);
 
-
-
   // ##################################################################
 
   //get teachers from server
 
   const [teachers, setTeachers] = useState([]);
-const getUrl="https://api.onlinedu.uz/api/v1/teachers?page=1"
+  const getUrl = "https://api.onlinedu.uz/api/v1/teachers?page=1";
   useEffect(() => {
     axios
       .get(getUrl)
@@ -41,8 +39,8 @@ const getUrl="https://api.onlinedu.uz/api/v1/teachers?page=1"
   // ##################################################################
 
   return (
-    <React.Fragment>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback="loading">
         {/* navbar */}
         <Navbar
           language={language}
@@ -51,10 +49,14 @@ const getUrl="https://api.onlinedu.uz/api/v1/teachers?page=1"
           setSideOpen={setSideOpen}
         />
         {/* sidebar */}
-        <Sidebar sideOpen={sideOpen} setSideOpen={setSideOpen} />
+        <Sidebar
+          sideOpen={sideOpen}
+          setSideOpen={setSideOpen}
+          language={language}
+          setLanguage={setLanguage}
+        />
         {/* login form modal */}
         <Modal showModal={showModal} setShowModal={setShowModal} />
-
         {/* bosh sahidfa */}
         <HeroSection />
         {/* xizmatlar */}
@@ -67,8 +69,8 @@ const getUrl="https://api.onlinedu.uz/api/v1/teachers?page=1"
         <Teachers teachers={teachers} />
         {/* footer */}
         <Footer />
-      </BrowserRouter>
-    </React.Fragment>
+      </Suspense>
+    </BrowserRouter>
   );
 };
 

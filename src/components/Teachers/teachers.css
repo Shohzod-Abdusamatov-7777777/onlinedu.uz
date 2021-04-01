@@ -1,3 +1,9 @@
+.teacher-head{
+  font-size: 18px;
+  line-height: 1.5;
+
+}
+
 .teacher {
   display: flex;
   flex-direction: column;
@@ -51,7 +57,7 @@
   height: 25px;
   border-radius: 50%;
   background: #898da6;
-  z-index: 10;
+  z-index: 5;
   cursor: pointer;
   display: flex;
   align-items: center;

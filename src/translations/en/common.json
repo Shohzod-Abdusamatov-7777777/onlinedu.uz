@@ -1,0 +1,66 @@
+{
+    "navbar": {
+        "kirish": "Login",
+        "kategoriya": "Categories",
+        "fan1": "Exact Sciences",
+        "fan2": "Natural Sciences",
+        "fan3": "Foreign Sciences",
+        "search": "What do you want to learn? For example: Management"
+    },
+    "hero-section": {
+        "title": "Enrich your knowledge and improve your skills",
+        "desc": "Professional development courses are now online. Take advantage of the convenience and save your time.",
+        "boshla": "Get started"
+    },
+    "xamkor": {
+        "title1": "5000+ public educators",
+        "title2": "are training online throughout Uzbekistan."
+    },
+    "qulaylik": {
+        "title": "Conveniences created for you",
+        "desc": "Our platform will help you to take advantage of the opportunities provided in the age of high technology and save your time, improve your skills at your convenience."
+    },
+    "sertifikat": {
+        "title": "Check the certificate for authenticity",
+        "desc": "Through this platform, both employers and certificate holders can verify the authenticity of the certificate.",
+        "search": "Enter the certificate number ",
+        "tekshir": "Certificate verification"
+    },
+    "courses": {
+        "title": "Popular courses",
+        "barcha": "View the entire course"
+    },
+    "call-to-action": {
+        "title": "Join a webinar hosted by experts.",
+        "desc": "Attend webinars, gain new knowledge, share your experience, ask questions and get answers!",
+        "foydalanuvchi": "the user joined the webinars in all directions.",
+        "btn": "Join"
+    },
+    "teachers": {
+        "title": "Our experts",
+        "desc": "Courses prepared by our leading experts will give you all the knowledge you need and help you improve your skills.",
+        "btn": "See them all"
+    },
+    "footer": {
+        "courses": {
+            "kurslar": "COURSES",
+            "fan1": "Exact Sciences",
+            "fan2": "Natural Sciences",
+            "fan3": "Foreign Sciences"
+        },
+        "my-profile": {
+            "profile": "MY PROFILE",
+            "account": "Account",
+            "my-courses": "My courses",
+            "practice": "Professional development"
+        },
+        "contact": {
+            "contact": "CONTACT",
+            "about-our": "About Us",
+            "policy": "Privacy Policy",
+            "help": "Help",
+            "faq": "FAQ"
+        },
+        "copyright": "2020-2021 Copyright. All rights reserved."
+    }
+}

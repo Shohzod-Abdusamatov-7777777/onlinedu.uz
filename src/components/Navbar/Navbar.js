@@ -4,7 +4,13 @@ import { FaBars, FaSearch, FaUser } from "react-icons/fa";
 import "./Navbar.css";
 import logoUrl from "../../images/logo.png";
 
+// translate i18n
+import { useTranslation } from "react-i18next";
+
 const Navbar = (props) => {
+  // trasnlate
+  const { t, i18n } = useTranslation("common");
+
   // language dropdown
   const [show, setShow] = useState(false);
   const [kategory, setKategory] = useState(false);
@@ -26,7 +32,7 @@ const Navbar = (props) => {
         <div className="header__inner">
           {/* logo */}
           <Link to="/">
-            <img src={logoUrl} />
+            <img src={logoUrl} alt="no img"/>
           </Link>
 
           {/* category */}
@@ -40,7 +46,7 @@ const Navbar = (props) => {
                 <span className="mr-0 mr-sm-2">
                   <FaBars />
                 </span>
-                <span>Kategoriyalar</span>
+                <span>{t("navbar.kategoriya")}</span>
               </button>
               {kategory && (
                 <div
@@ -49,13 +55,13 @@ const Navbar = (props) => {
                   onClick={() => setKategory(!kategory)}
                 >
                   <Link to="/courses/1?category=25" className="dropdown-item">
-                    Aniq fanlar
+                    {t("navbar.fan1")}
                   </Link>
                   <Link to="/courses/1?category=26" className="dropdown-item">
-                    Tabiiy fanlar
+                    {t("navbar.fan2")}
                   </Link>
                   <Link to="/courses/1?category=27" className="dropdown-item">
-                    Xorijiy tillar
+                    {t("navbar.fan3")}
                   </Link>
                 </div>
               )}
@@ -76,7 +82,7 @@ const Navbar = (props) => {
               style={
                 searchIcon ? { paddingLeft: "10px" } : { paddingLeft: "50px" }
               }
-              placeholder="Nimani o'rganishni xohlaysiz? Misol uchun: Menedjment"
+              placeholder={t("navbar.search")}
               value={searchValue}
               onChange={(e) => setSearchValue(e.currentTarget.value)}
               onClick={() => setSearchIcon(true)}
@@ -105,15 +111,33 @@ const Navbar = (props) => {
                 >
                   <div
                     className="dropdown-item"
-                    onClick={() => (setShow(!show), setLanguage("Русский"))}
+                    onClick={() => (
+                      setShow(!show),
+                      setLanguage("Русский"),
+                      i18n.changeLanguage("ru")
+                    )}
                   >
                     Русский
                   </div>
                   <div
                     className="dropdown-item"
-                    onClick={() => (setShow(!show), setLanguage("O'zbekcha"))}
+                    onClick={() => (
+                      setShow(!show),
+                      setLanguage("O'zbekcha"),
+                      i18n.changeLanguage("uz")
+                    )}
                   >
                     O'zbekcha
+                  </div>
+                  <div
+                    className="dropdown-item"
+                    onClick={() => (
+                      setShow(!show),
+                      setLanguage("English"),
+                      i18n.changeLanguage("en")
+                    )}
+                  >
+                    English
                   </div>
                 </div>
               )}
@@ -123,13 +147,15 @@ const Navbar = (props) => {
           {/* profile */}
           <div className="header__profile">
             <button
-              className="btn btn-primary"
+              className="btn btn-primary font-weight-bold"
               onClick={() => setShowModal(true)}
             >
               <span className="mr-0 mr-sm-2 ">
                 <FaUser />
               </span>
-              <span className="d-none d-sm-inline-block">Войти</span>
+              <span className="d-none d-sm-inline-block">
+                {t("navbar.kirish")}
+              </span>
             </button>
           </div>
 

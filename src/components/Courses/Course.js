@@ -6,16 +6,19 @@ import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 const Course = ({ course }) => {
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 mb-4 text-left mx-sm-0 mx-3">
-      <div className="card b-r-2 b-shadow border-0">
+      <div className="card b-r-1 b-shadow border-0">
         <div className="" style={{ position: "relative" }}>
-          <img src={cardImg} className="card-img-top bt-r-2" />
+          <img src={cardImg} className="card-img-top bt-r-1" />
           <div
             className="p-1 px-sm-3"
-            style={{ position: "absolute", top: "65%" }}
+            style={{ position: "absolute", bottom: "5%" }}
           >
             <button
-              className="btn btn-danger  mr-2 font-weight-bold text-light"
-              style={{ filter: `hue-rotate(${parseInt(course.id * 150)}deg)` }}
+              className="btn btn-danger mr-2 font-weight-bold text-light"
+              style={{
+                filter: `hue-rotate(${parseInt(course.id * 150)}deg)`,
+                fontSize: "14px",
+              }}
             >
               {course.name}
             </button>

@@ -7,9 +7,14 @@ import p5 from "../../images/p5.png";
 import Servicecard from "./ServiceCard";
 import { cardData } from "./cardData";
 
+// translate i18n
+import { useTranslation } from "react-i18next";
+
 const Service = () => {
   const images = [p1, p2, p3, p4, p5];
   const [certificate, setCertificate] = useState("");
+  // trasnlate
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
@@ -21,24 +26,23 @@ const Service = () => {
               maxWidth: "800px",
               margin: "auto",
               fontSize: "1.5rem",
+              lineHeight: "1.5",
             }}
-            className="text-suyoh"
+            className="text-suyoh mb-3"
           >
             <span
               className="text-green"
               style={{ fontSize: "1.3rem" }}
             >{` { `}</span>
-            5000+ xalq ta'limi xodimlari
+            {t("xamkor.title1")}
             <span
               className="text-green"
               style={{ fontSize: "1.3rem" }}
             >{` } `}</span>
-            <span>
-              butun O'zbekiston bo'yicha onlayn tarzda malaka oshirishmoqda.
-            </span>
+            <span>{t("xamkor.title2")}</span>
           </h3>
 
-          <div  className="overflow-x-auto">
+          <div className="overflow-x-auto">
             <div className="pt-3 d-flex min-w-100">
               {images.map((i, index) => (
                 <img src={i} key={index} alt="no img" />
@@ -57,14 +61,8 @@ const Service = () => {
             margin: "auto",
           }}
         >
-          <h2 className="font-weight-bold text-suyoh">
-            Siz uchun yaratilgan qulayliklar
-          </h2>
-          <p className="font-weight-normal text-p">
-            Platformamiz yuqori texnologiyalar zamonida taqdim qilinayotgan
-            imkoniyatlardan unumli foydalanishga va vaqtingizni tejashga,
-            o'zingizga qulay vaqtda malaka oshirishingizga yordam beradi.
-          </p>
+          <h2 className="font-weight-bold text-suyoh">{t("qulaylik.title")}</h2>
+          <p className="font-weight-normal text-p">{t("qulaylik.desc")}</p>
         </div>
 
         {/* service card */}
@@ -94,11 +92,10 @@ const Service = () => {
             }}
           >
             <h2 className="font-weight-bold text-suyoh py-2">
-              Sertifikatni haqiqiylikka tekshiring
+              {t("sertifikat.title")}
             </h2>
             <p className="font-weight-normal text-p py-3 px-sm-5">
-              Ushbu platforma orqali ish beruvchilar ham, sertifikat egalari ham
-              sertifikatning haqiqiyligini tekshirishlari mumkin.
+              {t("sertifikat.desc")}
             </p>
             <div
               className="row"
@@ -112,7 +109,7 @@ const Service = () => {
                 className="form-control bg-white col-md-8 col-12 input-lg py-3"
                 style={{ fontSize: "18px" }}
                 type="text"
-                placeholder="Sertifikat nomerini kiriting"
+                placeholder={t("sertifikat.search")}
                 value={certificate}
                 onChange={(e) => setCertificate(e.currentTarget.value)}
               />
@@ -122,7 +119,7 @@ const Service = () => {
                   className="btn btn-primary btn-lg col mt-md-0 mt-3"
                   style={{ fontSize: "18px" }}
                 >
-                  Sertifikatni tekshirish
+                  {t("sertifikat.tekshir")}
                 </button>
               </span>
             </div>

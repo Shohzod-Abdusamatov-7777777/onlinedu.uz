@@ -30,8 +30,10 @@ code {
   .container,
   .container-sm,
   .container-md,
-  .container-lg,
   .container-xl {
     max-width: 1140px;
+  }
+  .container-lg{
+    max-width: 1200px;
   }
 }

@@ -1,38 +1,42 @@
 import React from "react";
-import imgHero from "../../images/intro_w.png";
+import imgHero from "../../images/intro_w-2.png";
+// translate
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t, i18n } = useTranslation("common");
+
   return (
-    <div className="min-vh-100" style={{ overflow: "hidden" }}>
+    <div className="mt-4 mt-md-5" style={{ overflow: "hidden" }}>
       <div className="container">
         <div className="row top-80 ">
-          <div className="col-lg-6 pt-lg-5 p-3 pl-md-5 px-sm-5 px-4">
+          <div className="col-lg-6 pt-lg-5 p-3 pb-sm-5 pl-md-5 px-sm-5 px-4">
             <h1
               className="font-weight-bold py-2  pt-lg-5"
               style={{
                 color: "#0d2e69",
-                fontSize: "clamp(1.5rem,5vw,2.5rem)",
+                fontSize: "36px",
                 lineHeight: "1.3",
               }}
             >
-              Bilimlaringizni boyiting va malakangizni oshiring{" "}
+              {t("hero-section.title")}
             </h1>
             <p
-              className="text-muted font-weight-bold my-3"
+              className="text-muted font-weight-normal my-3"
               style={{
                 fontSize: "18px",
                 lineHeight: "1.5",
               }}
             >
-              Malaka oshirish uchun kurslar endi onlayn. Qulayliklardan
-              foydalaning va vaqtingizni tejang.
+              {" "}
+              {t("hero-section.desc")}
             </p>
             <button
               type="button"
               className="btn btn-primary py-2 px-3 mt-2 font-weight-bold"
               style={{ fontSize: "clamp(0.8rem,2vw,1.2rem)" }}
             >
-              Boshlamoq
+              {t("hero-section.boshla")}
             </button>
           </div>
           <div className="col-lg-6 text-center max-vh-100">

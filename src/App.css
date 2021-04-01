@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  /* font-family: "Open Sans", sans-serif !important; */
+  font-family: "Cera Pro", Arial, Helvetica, sans-serif !important;
 }
 
 /* bootstrap classini BTN-PRIMARY rangini ozgartirdim  */
@@ -53,7 +54,7 @@
 
 /*  sarlavha rangi */
 .text-suyoh {
-  color: rgb(13, 46, 105)  !important;
+  color: rgb(13, 46, 105) !important;
 }
 
 /* text title */
@@ -80,6 +81,24 @@
   .bt-r-2 {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+  }
+}
+
+/* border radius */
+.b-r-1 {
+  border-radius: 1rem;
+}
+.bt-r-1 {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+@media screen and (max-width: 576px) {
+  .b-r-1 {
+    border-radius: 1.2rem;
+  }
+  .bt-r-1 {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
   }
 }
 
@@ -117,7 +136,8 @@ button a:hover {
   color: #fff;
   font-weight: 600;
 }
-a,a:hover{
+a,
+a:hover {
   text-decoration: none;
 }
 /* scroll x */
@@ -128,9 +148,17 @@ a,a:hover{
   overflow-x: hidden;
 }
 
-.footer a,.footer a:hover{
+.footer li a,
+.footer li a:hover {
   font-weight: 500;
   color: #898da6;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
+  font-size: 16px;
+  line-height: 1.5;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+
+img{
+  -webkit-user-drag: none;
 }

@@ -2,7 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logoUrl from "../../images/logo.png";
 
+// translate i18n
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  // trasnlate
+  const { t, i18n } = useTranslation("common");
+
   return (
     <div className="bg-light w-100 pt-5 pb-2 footer">
       <div className="container">
@@ -13,81 +19,61 @@ const Footer = () => {
             </Link>
           </ul>
           <ul className="col-md-3 col-sm-6 col-10 px-sm-2 px-5 ">
-            <li>
-              <Link to="/" className="text-suyoh text-title pb-2">
-                KURSLAR
+            <li className="mb-2">
+              <Link to="/" className="text-suyoh text-title  font-weight-bold">
+                {t("footer.courses.kurslar")}
               </Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Aniq fanlar
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.courses.fan1")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Tabiiy fanlar
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.courses.fan2")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Xorijiy tillar
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.courses.fan3")}</Link>
             </li>
           </ul>
           <ul className="col-md-3 col-sm-6 col-10 px-sm-2 px-5 ">
-            <li>
-              <Link to="/" className="text-suyoh text-title pb-2">
-                MENING PROFILIM
+            <li className="mb-2">
+              <Link to="/" className="text-suyoh text-title  font-weight-bold">
+                {t("footer.my-profile.profile")}
               </Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Akkaunt
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.my-profile.account")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Mening kurslarim
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.my-profile.my-courses")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Malaka oshirish
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.my-profile.practice")}</Link>
             </li>
           </ul>
           <ul className="col-md-3 col-sm-6 col-10 px-sm-2 px-5 ">
-            <li>
-              <Link to="/" className="text-suyoh text-title pb-2">
-                ALOQA
+            <li className="mb-2">
+              <Link to="/" className="text-suyoh text-title  font-weight-bold">
+                {t("footer.contact.contact")}
               </Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Biz haqimizda
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.contact.about-our")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Konfidentsiallik siyosati
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.contact.policy")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                Yordam
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.contact.help")}</Link>
             </li>
-            <li>
-              <Link to="/" className="my-2">
-                FAQ
-              </Link>
+            <li className="mb-2">
+              <Link to="/"> {t("footer.contact.faq")}</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="text-center w-100 pt-3 pb-2 border-top">
         <h6 className="text-suyoh font-weight-bold">
-          &copy; 2020-2021 Copyright. Barcha huquqlar himoyalangan.
+          &copy;  {t("footer.copyright")}
         </h6>
       </div>
     </div>
