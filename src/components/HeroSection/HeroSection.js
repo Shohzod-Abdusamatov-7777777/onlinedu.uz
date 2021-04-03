@@ -28,7 +28,6 @@ const HeroSection = () => {
                 lineHeight: "1.5",
               }}
             >
-              {" "}
               {t("hero-section.desc")}
             </p>
             <button

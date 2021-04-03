@@ -44,14 +44,14 @@
 /* #################################################### */
 
 /* swipper  */
-.swiper-container {
+/* .swiper-container {
   position: relative;
   height: 100%;
   width: 100%;
-}
+} */
 
 /* swipper button */
-.swiper-button-prev,
+/* .swiper-button-prev,
 .swiper-button-next {
   width: 25px;
   height: 25px;
@@ -79,4 +79,4 @@
   position: absolute;
   right: 15px;
   text-align: right;
-}
+} */
