@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const Calltoaction = () => {
   // trasnlate
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   return (
     <div className=" py-5 my-5 call-img bg-light">

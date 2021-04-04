@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import $ from "jquery";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,9 +10,10 @@ import "swiper/swiper-bundle.min.css";
 import "./teachers.css";
 // translate i18n
 import { useTranslation } from "react-i18next";
-SwiperCore.use([Navigation, Autoplay]);
 
 const Teachers = () => {
+    SwiperCore.use([Navigation, Autoplay]);
+
     // ##################################################################
 
     //get teachers from server
@@ -35,7 +34,7 @@ const Teachers = () => {
     // ##################################################################
 
     // trasnlate
-    const { t, i18n } = useTranslation("common");
+    const { t} = useTranslation("common");
 
     return (
         <div className="py-5 text-center">
@@ -55,11 +54,11 @@ const Teachers = () => {
                         spaceBetween={10}
                         navigation
                         direction={"horizontal"}
-                        autoplay={{
-                            delay: 1200,
-                        }}
+                        autoplay={{ delay: 500 }}
+                        auto
                         loop={true}
                         style={{ marginBottom: "20px" }}
+                        slidesPerView={4}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -85,12 +84,17 @@ const Teachers = () => {
                                     }}
                                     key={index}
                                 >
-                                    <div className="item" key={index}>
-                                        <div className="teacher">
-                                            <img src={teacher.image ? `https://api.onlinedu.uz/storage/${teacher.image}` : "/images/courses/no-image.jpg"} alt="Teacher" />
-                                            <strong>{teacher.name}</strong>
-                                            <p>{teacher.position}</p>
-                                        </div>
+                                    <div className="teacher">
+                                        <img
+                                            src={
+                                                teacher.image
+                                                    ? `https://api.onlinedu.uz/storage/${teacher.image}`
+                                                    : "/logo512.png"
+                                            }
+                                            alt="Teacher"
+                                        />
+                                        <strong>{teacher.name}</strong>
+                                        <p>{teacher.position}</p>
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -104,67 +108,69 @@ const Teachers = () => {
                     </button>
                 ) : null}
             </div>
-            <style jsx>{`
-                .swiper-button-prev,
-                .swiper-button-next {
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 50%;
-                    background: #898da6;
-                }
-                .swiper-button-prev:hover,
-                .swiper-button-next:hover {
-                    background: #26caac;
-                }
-                .swiper-button-next::before {
-                    content: "";
-                    width: 3px;
-                    position: absolute;
-                    left: 12px;
-                    top: 10px;
-                    transform: rotate(45deg);
-                    height: 10px;
-                    border-bottom-left-radius: 3px;
-                    border-bottom-right-radius: 3px;
-                    background: white;
-                }
-                .swiper-button-next::after {
-                    content: "";
-                    left: 12px;
-                    top: 5px;
-                    transform: rotate(-45deg);
-                    position: absolute;
-                    width: 3px;
-                    height: 10px;
-                    border-top-left-radius: 3px;
-                    border-top-right-radius: 3px;
-                    background: white;
-                }
-                .swiper-button-prev::before {
-                    content: "";
-                    width: 3px;
-                    position: absolute;
-                    left: 10px;
-                    top: 10px;
-                    transform: rotate(-45deg);
-                    height: 10px;
-                    background: white;
-                    border-bottom-left-radius: 3px;
-                    border-bottom-right-radius: 3px;
-                }
-                .swiper-button-prev::after {
-                    content: "";
-                    left: 10px;
-                    top: 5px;
-                    transform: rotate(45deg);
-                    position: absolute;
-                    border-top-left-radius: 3px;
-                    border-top-right-radius: 3px;
-                    width: 3px;
-                    height: 10px;
-                    background: white;
-                }
-            `}</style>
+            <div>
+                <style jsx="true">{`
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background: #898da6;
+                    }
+                    .swiper-button-prev:hover,
+                    .swiper-button-next:hover {
+                        background: #26caac;
+                    }
+                    .swiper-button-next::before {
+                        content: "";
+                        width: 3px;
+                        position: absolute;
+                        left: 12px;
+                        top: 10px;
+                        transform: rotate(45deg);
+                        height: 10px;
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                        background: white;
+                    }
+                    .swiper-button-next::after {
+                        content: "";
+                        left: 12px;
+                        top: 5px;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        width: 3px;
+                        height: 10px;
+                        border-top-left-radius: 3px;
+                        border-top-right-radius: 3px;
+                        background: white;
+                    }
+                    .swiper-button-prev::before {
+                        content: "";
+                        width: 3px;
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        transform: rotate(-45deg);
+                        height: 10px;
+                        background: white;
+                        border-bottom-left-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+                    .swiper-button-prev::after {
+                        content: "";
+                        left: 10px;
+                        top: 5px;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        border-top-left-radius: 3px;
+                        border-top-right-radius: 3px;
+                        width: 3px;
+                        height: 10px;
+                        background: white;
+                    }
+                `}</style>
+            </div>
         </div>
     );
 };

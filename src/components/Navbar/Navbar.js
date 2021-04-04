@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaSearch, FaUser } from "react-icons/fa";
 import "./Navbar.css";
@@ -12,7 +12,7 @@ const Navbar = (props) => {
     const { t, i18n } = useTranslation("common");
 
     // language dropdown
-    const [show, setShow] = useState(false);
+    const [showLn, setShowLn] = useState(false);
     const [kategory, setKategory] = useState(false);
     const { language, setLanguage } = props;
 
@@ -26,7 +26,6 @@ const Navbar = (props) => {
     // sidebar open btn
     const { setSideOpen } = props;
 
-    
     return (
         <header className="header">
             <div className="container">
@@ -96,18 +95,19 @@ const Navbar = (props) => {
                     {/* language */}
                     <div className="header__languages d-none d-lg-block">
                         <div className="dropdown show">
-                            <button className="btn btn-text dropdown-toggle" data-toggle="dropdown" onClick={() => setShow(!show)}>
+                            <button className="btn btn-text dropdown-toggle" data-toggle="dropdown" onClick={() => setShowLn(!showLn)}>
                                 {language}
                             </button>
-                            {show && (
-                                <div className={show ? "dropdown-menu show" : "dropdown-menu"} style={{ transform: "translate(0 40px)" }}>
+                            {showLn && (
+                                <div
+                                    className={showLn ? "dropdown-menu show" : "dropdown-menu"}
+                                    style={{ transform: "translate(0 40px)" }}
+                                    onClick={() => setShowLn(!showLn)}
+                                >
                                     <div
                                         className="dropdown-item"
                                         onClick={() => (
-                                            setShow(!show),
-                                            setLanguage("Русский"),
-                                            window.localStorage.setItem("language", "ru"),
-                                            i18n.changeLanguage("ru")
+                                            setLanguage("Русский"), window.localStorage.setItem("language", "ru"), i18n.changeLanguage("ru")
                                         )}
                                     >
                                         Русский
@@ -115,7 +115,6 @@ const Navbar = (props) => {
                                     <div
                                         className="dropdown-item"
                                         onClick={() => (
-                                            setShow(!show),
                                             setLanguage("O'zbekcha"),
                                             window.localStorage.setItem("language", "uz"),
                                             i18n.changeLanguage("uz")
@@ -126,10 +125,7 @@ const Navbar = (props) => {
                                     <div
                                         className="dropdown-item"
                                         onClick={() => (
-                                            setShow(!show),
-                                            setLanguage("English"),
-                                            window.localStorage.setItem("language", "en"),
-                                            i18n.changeLanguage("en")
+                                            setLanguage("English"), window.localStorage.setItem("language", "en"), i18n.changeLanguage("en")
                                         )}
                                     >
                                         English
@@ -142,12 +138,12 @@ const Navbar = (props) => {
                     {/* profile */}
                     <div className="header__profile">
                         {window.localStorage.getItem("token") ? (
-                            <a href="/dashboard/profile" className="btn btn-primary font-weight-bold">
+                            <Link to="/dashboard/profile" className="btn btn-primary font-weight-bold">
                                 <span className="mr-0 mr-sm-2 ">
                                     <FaUser />
                                 </span>
                                 <span className="d-none d-sm-inline-block">Akkaunt</span>
-                            </a>
+                            </Link>
                         ) : (
                             <button className="btn btn-primary font-weight-bold" onClick={() => setShowModal(true)}>
                                 <span className="mr-0 mr-sm-2 ">

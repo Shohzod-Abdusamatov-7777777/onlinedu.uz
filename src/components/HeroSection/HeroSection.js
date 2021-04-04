@@ -4,7 +4,7 @@ import imgHero from "../../images/intro_w-2.png";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t} = useTranslation("common");
 
   return (
     <div className="mt-4 mt-md-5" style={{ overflow: "hidden" }}>

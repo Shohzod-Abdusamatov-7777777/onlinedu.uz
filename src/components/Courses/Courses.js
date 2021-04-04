@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const Courses = () => {
 
    // trasnlate
-   const { t, i18n } = useTranslation("common");
+   const { t } = useTranslation("common");
 
 
   const [courses, setCourses] = useState([

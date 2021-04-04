@@ -12,9 +12,11 @@ const ForgotPassword = (props) => {
             {/* moadl header */}
             <div className="modal-header">
                 <h5>Parolni tiklash</h5>
-                <button className="btn" type="button" onClick={() => setShowModal(false)}>
-                    <FaTimes />
-                </button>
+                {setShowModal && (
+                    <button className="btn" type="button" onClick={() => setShowModal(false)}>
+                        <FaTimes />
+                    </button>
+                )}
             </div>
             {/* modal body */}
             <div className="modal-body">

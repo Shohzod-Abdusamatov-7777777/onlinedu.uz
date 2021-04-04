@@ -1,8 +1,6 @@
 
 const FormatPhoneNumber = (phoneNumber, setPhoneNumber) => {
     let num = phoneNumber.replace(/\D/g, "");
-    console.log("phone numbner length " + num.length);
-    console.log("phone number is " + "+" + num);
     setPhoneNumber(
         num.length <= 3
             ? "+998"

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   // trasnlate
-  const { t, i18n } = useTranslation("common");
+  const { t} = useTranslation("common");
 
   return (
     <div className="bg-light w-100 pt-5 pb-2 footer">
