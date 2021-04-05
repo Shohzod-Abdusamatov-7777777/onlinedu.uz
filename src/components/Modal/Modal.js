@@ -10,6 +10,9 @@ import { ModalBox, ModalContainer, MadalDialog } from "./ModalElements";
 const Modal = (props) => {
     const { showModal, setShowModal } = props;
     const [act, setAct] = useState(1);
+    if(showModal){
+        document.body.style.overflowY="hidden";
+    }else document.body.style.overflowY="auto"
 
     return (
         <ModalContainer show={showModal}>

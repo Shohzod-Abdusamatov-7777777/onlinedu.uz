@@ -13,11 +13,11 @@ const Calltoaction = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div className=" py-5 my-5 call-img bg-light">
+    <div className="py-5 my-5 call-img bg-light">
       <div className="container">
         <div className="row">
           <div className="col-lg-7 col-12 mt-4">
-            <h1 className="call-title font-weight-bold mb-4">
+            <h1 className="call-title cera-pro-bold mb-4">
               {t("call-to-action.title")}
             </h1>
             <p className="text-p  font-weight-bold ">
@@ -38,11 +38,11 @@ const Calltoaction = () => {
                   <span>+120</span>
                 </li>
               </ul>
-              <span className="text-suyoh font-weight-bold ml-2">
+              <span className="text-suyoh cera-pro-bold ml-2">
                 {t("call-to-action.foydalanuvchi")}
               </span>
             </div>
-            <button className="btn btn-primary btn-lg">
+            <button className="btn btn-primary btn-lg mb-5">
               <Link to="/"> {t("call-to-action.btn")}</Link>
             </button>
           </div>

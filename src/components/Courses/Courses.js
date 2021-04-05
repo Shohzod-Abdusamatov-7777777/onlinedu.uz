@@ -20,11 +20,9 @@ const Courses = () => {
 
     return (
         <div className="container text-center py-4">
-            <h2 className="text-suyoh font-weight-bold mb-4">{t("courses.title")}</h2>
+            <h2 className="text-suyoh cera-pro-bold mb-4">{t("courses.title")}</h2>
             <div className="row">{courses && courses.map((course) => <Course key={course.id} course={course} />)}</div>
-            <div>
-                <button className="btn btn-primary my-3 py-2 px-3  font-weight-bold">{t("courses.barcha")}</button>
-            </div>
+            <div>{courses && <button className="btn btn-primary my-3 py-2 px-3  font-weight-bold">{t("courses.barcha")}</button>}</div>
         </div>
     );
 };

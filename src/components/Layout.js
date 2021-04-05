@@ -8,7 +8,7 @@ import "../App.css";
 const Layout = (props) => {
     // language"O'zbekcha"
     const getLanguage = window.localStorage.getItem("language");
-    const [language, setLanguage] = useState(getLanguage === "uz" ? "O'zbekcha" : getLanguage === "ru" ? "Русский" : "English");
+    const [language, setLanguage] = useState(getLanguage === "en" ? "English" : getLanguage === "ru" ? "Русский" : "O'zbekcha");
     // modal
     const [showModal, setShowModal] = useState(false);
     const [sideOpen, setSideOpen] = useState(false);

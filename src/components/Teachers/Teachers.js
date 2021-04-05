@@ -33,7 +33,7 @@ const Teachers = () => {
     // ##################################################################
 
     // trasnlate
-    const { t} = useTranslation("common");
+    const { t } = useTranslation("common");
 
     return (
         <div className="py-5 text-center">
@@ -85,11 +85,7 @@ const Teachers = () => {
                                 >
                                     <div className="teacher">
                                         <img
-                                            src={
-                                                teacher.image
-                                                    ? `https://api.onlinedu.uz/storage/${teacher.image}`
-                                                    : "/logo512.png"
-                                            }
+                                            src={teacher.image ? `https://api.onlinedu.uz/storage/${teacher.image}` : "/logo512.png"}
                                             alt="Teacher"
                                         />
                                         <strong>{teacher.name}</strong>
@@ -102,7 +98,7 @@ const Teachers = () => {
                 {/* ########################################################################### */}
                 {/* hammasini korish */}
                 {teachers.length > 0 ? (
-                    <button className="btn btn-primary btn-md mt-4 mt-sm-5 p-2 px-3 font-size-18">
+                    <button className="btn btn-primary btn-md my-4  p-2 mb-3 px-3 font-size-18">
                         <Link to="/teachers">{t("teachers.btn")}</Link>
                     </button>
                 ) : null}
