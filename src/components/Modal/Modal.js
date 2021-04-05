@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import ForgotPassword from "../ForgotPassword";
+import Loading from "../Loading";
 import SignIn from "../SignIn";
 import SignUp from "../SignUp";
 import ValidateSms from "../ValidateSms";
@@ -21,6 +22,9 @@ const Modal = (props) => {
                         <ForgotPassword setShowModal={setShowModal} setAct={(a) => setAct(a)} />
                     ) : act === 3 ? (
                         <ValidateSms setShowModal={setShowModal} setAct={(a) => setAct(a)} />
+                    ) : act === 7 ? (
+                        <div className="top-80 d-flex align-item-center justify-content-center"><Loading /></div>
+                        
                     ) : (
                         <SignIn setShowModal={setShowModal} setAct={(a) => setAct(a)} />
                     )}

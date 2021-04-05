@@ -15,6 +15,7 @@ const ValidateSms = (props) => {
     const [smsTime, setSmsTime] = useState(3);
 
     const handleSms = () => {
+        console.log("handle cliocked");
         const data = { login: sessionStorage.getItem("phone"), smscode: parseInt(sms) };
         setError(null);
         setLoading(true);
@@ -28,6 +29,25 @@ const ValidateSms = (props) => {
             .catch((err) => {
                 setLoading(false);
                 setError("Biz yuborgan kodni kiriting!!!");
+            });
+    };
+
+    const handleReset = () => {
+        const data = {
+            login: sessionStorage.getItem("phone"),
+            password: sessionStorage.getItem("password"),
+            confirm_password: sessionStorage.getItem("password"),
+        };
+        props.setAct(7);
+
+        axios
+            .post("https://api.onlinedu.uz/api/v1/register", data)
+            .then((response) => {
+                console.log(response);
+                props.setAct(3);
+            })
+            .catch((err) => {
+                setError("Something went wrong! .Please try again later.");
             });
     };
 
@@ -94,7 +114,11 @@ const ValidateSms = (props) => {
                 {smsTime === 0 ? (
                     <div>
                         <h5>SMS kodni olmadingizmi? Qaytadan yuboraylikmi?</h5>
-                        <button type="submit" className="btn py-2 mb-2 btn-primary w-100 font-size-18 font-weight-bold" onClick={handleSms}>
+                        <button
+                            type="submit"
+                            className="btn py-2 mb-2 btn-primary w-100 font-size-18 font-weight-bold"
+                            onClick={() => (handleReset(), console.log("reset onclick"))}
+                        >
                             Reset
                         </button>
                     </div>

@@ -32,7 +32,7 @@ const SignUp = (props) => {
             confirm_password: passwordRep,
         };
 
-        if (password.length < 8 || passwordRep.length < 8 || phone.length !== 12) {
+        if (password.length < 8 || password !== passwordRep || passwordRep.length < 8 || phone.length !== 12) {
             if (phone.length !== 12) setPhoneError("Telefon nomer kiriting!");
 
             if (password !== passwordRep) setPasswordError("Parolni takrorlang");
@@ -46,8 +46,8 @@ const SignUp = (props) => {
                 .post("https://api.onlinedu.uz/api/v1/register", data)
                 .then((response) => {
                     setLoading(false);
-                    sessionStorage.setItem("phone",phone);
-                    sessionStorage.setItem("password",password);
+                    sessionStorage.setItem("phone", phone);
+                    sessionStorage.setItem("password", password);
                     console.log(response);
                     props.setAct(3);
                 })
