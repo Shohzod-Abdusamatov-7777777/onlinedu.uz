@@ -17,20 +17,25 @@ const SignIn = (props) => {
     const [loading, setLoading] = useState(false);
     const history = useHistory();
     const phone = phoneNumber.replace(/\D/g, "");
+    const API_URL = "https://api.onlinedu.uz";
 
     const handleLogin = () => {
+        const data = {
+            name: phone,
+            password: password,
+        };
         setError(null);
         setLoading(true);
         axios
-            .get("https://jsonplaceholder.typicode.com/posts/1")
+            .post(`${API_URL}/api/v1/login`, data)
             .then((response) => {
                 setLoading(false);
-                setUserSession(JSON.stringify(response.data), JSON.stringify(response.data));
+                setUserSession(JSON.stringify(response.data.access_token), JSON.stringify(response.data));
                 history.push("/dashboard/profile");
             })
             .catch((err) => {
                 setLoading(false);
-                if (err.response.status === 401) setError("error");
+                if (err.response.status === 401) setError("Parol yoki telefon nomer xato!");
                 else setError("Something went wrong! .Please try again later.");
             });
     };

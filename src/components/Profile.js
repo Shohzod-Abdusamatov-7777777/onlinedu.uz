@@ -14,7 +14,7 @@ const Profile = (props) => {
     useEffect(() => {
         !token && history.push("/");
 
-        token = token.replace(/"/g, "");
+        token = token && token.replace(/"/g, "");
         setLoad(true);
         setGetUserError(null);
         axios
@@ -23,8 +23,6 @@ const Profile = (props) => {
             .catch((err) => (setGetUserError("Qaytadan urinib ko'ring"), setLoad(false), console.log(err.massage)));
     }, []);
 
-    // setLoad(false)
-    console.log(user);
     return (
         <Layout>
             {load ? (

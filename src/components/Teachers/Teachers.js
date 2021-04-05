@@ -26,7 +26,6 @@ const Teachers = () => {
             .then((res) => res)
             .then((data) => {
                 setTeachers(data.data.data);
-                console.log(data.data.data);
             })
             .catch((err) => console.log(err.message));
     }, []);
